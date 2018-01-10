@@ -1,2 +1,20 @@
 <h1>All Pets for <%= @owner.email %></h1>
 <hr>
+
+<ul>
+  <% @owner.pets.each do |poptart| %>
+    <li>
+      <strong>Name:</strong> 
+      <%= link_to poptart do %>
+        <%= poptart.name %>
+      <% end %>
+      - <%= poptart.breed %>
+    </li>
+  <% end %>
+</ul>
+<br>
+
+<%= link_to "Add new pet", new_owner_pet_path %>
+
+<hr>
+<%= link_to "Back to owner page", owner_path(@owner) %>

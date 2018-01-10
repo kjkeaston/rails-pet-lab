@@ -3,3 +3,12 @@
 <p><strong>Name:</strong> <%= @owner.first_name %> <%= @owner.last_name %></p>
 <p><strong>Email:</strong> <%= @owner.email %></p>
 <p><strong>Phone Number:</strong> <%= @owner.phone %></p>
+
+<%= link_to "See owner's pets", owner_pets_path(@owner) %>
+<br>
+<br>
+<%= link_to "Edit owner", edit_owner_path(@owner) %>
+
+<hr>
+
+<%= link_to "Back to all owners", owners_path %>
